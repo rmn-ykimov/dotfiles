@@ -36,6 +36,7 @@ program = "/bin/zsh"
 
 [window]
 opacity = 1
+startup_mode = "Fullscreen"
 
 [window.class]
 general = "Alacritty"
