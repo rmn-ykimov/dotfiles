@@ -2,6 +2,7 @@ export PATH="/usr/local/bin:$PATH"
 export TERM="xterm-256color"
 export SHELL=/bin/zsh
 export ZSH="$HOME/.oh-my-zsh"
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Automatic update of Oh My Zsh
 zstyle ':omz:update' mode auto
@@ -30,3 +31,4 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -lah'
 alias h='history'
 
+PROMPT='%F{cyan}%n@%m %F{yellow}%1~ %F{green}> %f'
