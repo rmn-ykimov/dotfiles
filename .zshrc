@@ -1,3 +1,4 @@
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export TERM="xterm-256color"
 export SHELL=/bin/zsh
