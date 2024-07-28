@@ -33,3 +33,9 @@ alias ll='ls -lah'
 alias h='history'
 
 PROMPT='%F{cyan}%n@%m %F{yellow}%1~ %F{green}> %f'
+
+# Automatic tmux startup when launching the terminal
+if [[ -z "$TMUX" ]]; then
+  tmux attach -t default || tmux new -s default
+fi
+
