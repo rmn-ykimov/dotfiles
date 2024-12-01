@@ -24,7 +24,6 @@
           pkgs.starship
           pkgs.postgresql
           pkgs.obsidian
-            #pkgs.vlc #no packages 
           pkgs.zotero
           pkgs.utm
             #pkgs.godot_4 #no packages
@@ -48,6 +47,18 @@
           pkgs.vulkan-tools
           pkgs.tree
         ];
+
+        homebrew = {
+          enable = true;
+          casks = [
+            #"blender"
+            "vlc"
+            "godot"
+          ];
+          onActivation.cleanup = "zap";
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
+        };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
