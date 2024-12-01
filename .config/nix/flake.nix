@@ -1,3 +1,4 @@
+#TEST
 {
   description = "My nix-darwin system flake";
 
