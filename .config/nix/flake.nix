@@ -25,18 +25,18 @@
           pkgs.starship
           pkgs.postgresql
           pkgs.obsidian
-            #pkgs.vlc
+            #pkgs.vlc #no packages 
           pkgs.zotero
           pkgs.utm
-            #pkgs.godot_4
+            #pkgs.godot_4 #no packages
           pkgs.lmstudio
-            #pkgs.insomnia
+            #pkgs.insomnia #no packages
           pkgs.docker
           pkgs.docker-compose
           pkgs.dbeaver-bin
           pkgs.darktable
-            #pkgs.blender
-            #pkgs.anki
+            #pkgs.blender #no packages
+            #pkgs.anki #no packages
           pkgs.google-chrome
           pkgs.tmux
           pkgs.rar
