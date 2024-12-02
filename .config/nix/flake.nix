@@ -18,6 +18,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ pkgs.neovim
+          pkgs.ffmpeg
           pkgs.git
           pkgs.git-lfs
           pkgs.stow
