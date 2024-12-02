@@ -19,21 +19,13 @@
       git-lfs
       stow
       starship
-      darktable
-      google-chrome
       tmux
       rar
       ripgrep
       python313
-      python312
-      djvu2pdf
       scons
       cmake
-      vulkan-tools
       tree
-      gcc
-      gdb
-      gnumake
       wget
       curl
       htop
