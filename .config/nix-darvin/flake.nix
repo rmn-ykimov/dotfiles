@@ -27,15 +27,11 @@
           pkgs.obsidian
           pkgs.zotero
           pkgs.utm
-            #pkgs.godot_4 #no packages
           pkgs.lmstudio
-            #pkgs.insomnia #no packages
           pkgs.docker
           pkgs.docker-compose
           pkgs.dbeaver-bin
           pkgs.darktable
-            #pkgs.blender #no packages
-            #pkgs.anki #no packages
           pkgs.google-chrome
           pkgs.tmux
           pkgs.rar
@@ -47,6 +43,7 @@
           pkgs.cmake
           pkgs.vulkan-tools
           pkgs.tree
+          pkgs.vscode
         ];
 
         homebrew = {
