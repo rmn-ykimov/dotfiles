@@ -16,14 +16,11 @@
     vim
     wget
     zip
+    neovim
   ];
 
   stable-packages = with pkgs; [
     # FIXME: customize these stable packages to your liking for the languages that you use
-
-    # FIXME: you can add plugins, change keymaps etc using (jeezyvim.nixvimExtend {})
-    # https://github.com/LGUG2Z/JeezyVim#extending
-    jeezyvim
 
     # key tools
     gh # for bootstrapping
@@ -56,6 +53,7 @@
     shfmt
     statix # nix
   ];
+  
 in {
   imports = [
     nix-index-database.hmModules.nix-index
