@@ -4,40 +4,59 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = inputs@{ self, nixpkgs }: {
+  outputs = inputs@{ self, nixpkgs }: 
+  let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    
+    commonPackages = with pkgs; [
+      neovim
+      ffmpeg
+      git
+      git-lfs
+      stow
+      starship
+      darktable
+      google-chrome
+      tmux
+      rar
+      ripgrep
+      python313
+      python312
+      djvu2pdf
+      scons
+      cmake
+      vulkan-tools
+      tree
+      gcc
+      gdb
+      gnumake
+      wget
+      curl
+      htop
+    ];
+  in
+  {
+    packages.${system}.default = pkgs.buildEnv {
+      name = "ubuntu-environment";
+      paths = commonPackages;
+    };
+
     nixosConfigurations.ubuntu = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       modules = [
         ({ config, pkgs, ... }: {
           nixpkgs.config.allowUnfree = true;
-
-          # Необходимо для использования flakes
+          
           nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-          environment.systemPackages = with pkgs; [
-            neovim
-            ffmpeg
-            git
-            git-lfs
-            stow
-            starship
-            tmux
-            rar
-            ripgrep
-            python313
-            python312
-            tree
+          environment.systemPackages = commonPackages;
 
-            # Базовые Linux-утилиты
-            gcc
-            gdb
-            gnumake
-            wget
-            curl
-            htop
-          ];
+          system.stateVersion = "23.11";
 
-          # Настройка пользователя
           users.users.your-username = {
             isNormalUser = true;
             extraGroups = [ "wheel" ];
