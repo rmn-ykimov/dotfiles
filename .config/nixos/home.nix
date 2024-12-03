@@ -23,19 +23,19 @@
     # FIXME: customize these stable packages to your liking for the languages that you use
 
     # key tools
-    gh # for bootstrapping
-    just
+    #gh # for bootstrapping
+    #just
 
     # core languages
-    rustup
+    #rustup
 
     # rust stuff
-    cargo-cache
-    cargo-expand
+    #cargo-cache
+    #cargo-expand
 
     # local dev stuf
-    mkcert
-    httpie
+    #mkcert
+    #httpie
 
     # treesitter
     tree-sitter
@@ -48,9 +48,9 @@
     # formatters and linters
     alejandra # nix
     deadnix # nix
-    nodePackages.prettier
-    shellcheck
-    shfmt
+    #nodePackages.prettier
+    #shellcheck
+    #shfmt
     statix # nix
   ];
   

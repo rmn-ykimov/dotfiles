@@ -16,12 +16,12 @@
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    jeezyvim.url = "github:LGUG2Z/JeezyVim";
+    #jeezyvim.url = "github:LGUG2Z/JeezyVim";
   };
 
   outputs = inputs:
     with inputs; let
-      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets.json");
+      #secrets = builtins.fromJSON (builtins.readFile "${self}/secrets.json");
 
       nixpkgsWithOverlays = system: (import nixpkgs rec {
         inherit system;
@@ -35,7 +35,7 @@
 
         overlays = [
           nur.overlay
-          jeezyvim.overlays.default
+          #jeezyvim.overlays.default
 
           (_final: prev: {
             unstable = import nixpkgs-unstable {
@@ -84,7 +84,7 @@
 
       nixosConfigurations.nixos = mkNixosConfiguration {
         hostname = "nixos";
-        username = "nixos"; # FIXME: replace with your own username!
+        username = "roman"; # FIXME: replace with your own username!
         modules = [
           nixos-wsl.nixosModules.wsl
           ./wsl.nix
