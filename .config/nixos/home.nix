@@ -63,7 +63,7 @@ in {
     nix-index-database.hmModules.nix-index
   ];
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "24.05";
 
   home = {
     username = "${username}";
@@ -121,7 +121,7 @@ in {
 
     broot.enable = true;
     broot.enableZshIntegration = true;
-    
+
     direnv.enable = true;
     direnv.nix-direnv.enable = true;
 
