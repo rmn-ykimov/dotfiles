@@ -164,9 +164,6 @@ in {
         diff = {
           colorMoved = "default";
         };
-        core = {
-          longpaths = true;
-        };
       };
     };
   };
