@@ -12,9 +12,9 @@
   networking.hostName = "${hostname}";
 
   # FIXME: change your shell here if you don't want fish
-  programs.fish.enable = true;
-  environment.pathsToLink = ["/share/fish"];
-  environment.shells = [pkgs.fish];
+  programs.zsh.enable = true;
+  environment.pathsToLink = ["/share/zsh"];
+  environment.shells = [pkgs.zsh];
 
   environment.enableAllTerminfo = true;
 
@@ -26,7 +26,7 @@
   users.users.${username} = {
     isNormalUser = true;
     # FIXME: change your shell here if you don't want fish
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [
       "wheel"
       # FIXME: uncomment the next line if you want to run docker without sudo
@@ -46,7 +46,7 @@
     ];
   };
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "24.05";
 
   wsl = {
     enable = true;
