@@ -63,7 +63,7 @@ in {
     nix-index-database.hmModules.nix-index
   ];
 
-  home.stateVersion = "22.11";
+  home.stateVersion = "25.05";
 
   home = {
     username = "${username}";
@@ -87,7 +87,7 @@ in {
   programs = {
     home-manager.enable = true;
     nix-index.enable = true;
-    nix-index.enableFishIntegration = true;
+    nix-index.enableZshIntegration = true;
     nix-index-database.comma.enable = true;
 
     # FIXME: disable this if you don't want to use the starship prompt
@@ -122,7 +122,7 @@ in {
     zsh = {
       enable = true;
       autocd = true;
-      enableAutosuggestions = true;
+      autosuggestions.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
     };
