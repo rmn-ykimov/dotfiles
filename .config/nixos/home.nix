@@ -20,7 +20,11 @@
   ];
 
   stable-packages = with pkgs; [
-    # FIXME: customize these stable packages to your liking for the languages that you use
+    # FIXME: customize these stable packages to your liking for the languages
+    # that you use
+    
+    # Shell
+    zsh
 
     # key tools
     #gh # for bootstrapping
@@ -67,7 +71,7 @@ in {
 
     sessionVariables.EDITOR = "nvim";
     # FIXME: set your preferred $SHELL
-    sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/fish";
+    sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
   };
 
   home.packages =
@@ -104,16 +108,29 @@ in {
 
     # FIXME: disable whatever you don't want
     fzf.enable = true;
-    fzf.enableFishIntegration = true;
+    fzf.enableZshIntegration = true;
     lsd.enable = true;
     lsd.enableAliases = true;
     zoxide.enable = true;
-    zoxide.enableFishIntegration = true;
+    zoxide.enableZshIntegration = true;
     zoxide.options = ["--cmd cd"];
     broot.enable = true;
-    broot.enableFishIntegration = true;
+    broot.enableZshIntegration = true;
     direnv.enable = true;
     direnv.nix-direnv.enable = true;
+
+    zsh = {
+      enable = true;
+      autocd = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
+    
+      shellAliases = {
+        ll = "ls -l";
+        la = "ls -la";
+      };
+    };
 
     git = {
       enable = true;
