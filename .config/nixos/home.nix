@@ -125,11 +125,6 @@ in {
       enableAutosuggestions = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
-    
-      shellAliases = {
-        ll = "ls -l";
-        la = "ls -la";
-      };
     };
 
     git = {
