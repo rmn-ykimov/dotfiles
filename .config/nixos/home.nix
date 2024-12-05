@@ -85,7 +85,9 @@ in {
     ];
 
   programs = {
+
     home-manager.enable = true;
+    
     nix-index.enable = true;
     nix-index.enableZshIntegration = true;
     nix-index-database.comma.enable = true;
@@ -109,20 +111,24 @@ in {
     # FIXME: disable whatever you don't want
     fzf.enable = true;
     fzf.enableZshIntegration = true;
+
     lsd.enable = true;
     lsd.enableAliases = true;
+
     zoxide.enable = true;
     zoxide.enableZshIntegration = true;
     zoxide.options = ["--cmd cd"];
+
     broot.enable = true;
     broot.enableZshIntegration = true;
+    
     direnv.enable = true;
     direnv.nix-direnv.enable = true;
 
     zsh = {
       enable = true;
       autocd = true;
-      autosuggestions.enable = true;
+      enableAutosuggestions = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
     };
