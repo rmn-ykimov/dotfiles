@@ -45,6 +45,7 @@
           pkgs.vulkan-tools
           pkgs.tree
           pkgs.vscode
+          pkgs.google-chrome
         ];
 
         system.activationScripts.applications.text = let
