@@ -20,32 +20,40 @@
         [ pkgs.neovim
           pkgs.mkalias
           pkgs.ffmpeg
+          
           pkgs.git
           pkgs.git-lfs
+          
           pkgs.stow
           pkgs.starship
-          pkgs.postgresql
-          pkgs.obsidian
-          pkgs.zotero
-          pkgs.utm
-          pkgs.lmstudio
-          pkgs.docker
-          pkgs.docker-compose
-          pkgs.dbeaver-bin
-          pkgs.darktable
-          pkgs.google-chrome
           pkgs.tmux
           pkgs.rar
           pkgs.ripgrep
+          pkgs.postgresql
+          
+          pkgs.docker
+          pkgs.docker-compose
+         
           pkgs.python313
           pkgs.python312
+          
           pkgs.djvu2pdf
+         
           pkgs.scons
           pkgs.cmake
+         
           pkgs.vulkan-tools
+          
           pkgs.tree
+
           pkgs.vscode
           pkgs.google-chrome
+          pkgs.obsidian
+          pkgs.darktable
+          pkgs.dbeaver-bin
+          pkgs.zotero
+          pkgs.lmstudio
+          #pkgs.utm
         ];
 
         system.activationScripts.applications.text = let
