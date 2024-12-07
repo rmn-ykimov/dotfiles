@@ -91,7 +91,7 @@
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
-      nix.settings.auto-optimise-store = true;
+      nix.optimise.automatic = true;
 
       nix.settings.gc = {
         automatic = true;
