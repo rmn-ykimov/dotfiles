@@ -91,6 +91,14 @@
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
+      nix.settings.auto-optimise-store = true;
+
+      nix.settings.gc = {
+        automatic = true;
+        dates = "weekly";
+        options = "--delete-older-than 7d"
+      };
+
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
 
