@@ -96,7 +96,7 @@
       nix.settings.gc = {
         automatic = true;
         dates = "weekly";
-        options = "--delete-older-than 7d"
+        options = "--delete-older-than 7d";
       };
 
       # Enable alternative shell support in nix-darwin.
