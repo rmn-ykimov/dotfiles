@@ -79,7 +79,7 @@
         homebrew = {
           enable = true;
           casks = [
-            #"blender"
+            "blender"
             "vlc"
             "godot"
           ];
