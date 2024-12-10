@@ -53,6 +53,7 @@
           pkgs.dbeaver-bin
           pkgs.zotero
           pkgs.lmstudio
+          pkgs.wireguard-tools
           #pkgs.utm
         ];
 
