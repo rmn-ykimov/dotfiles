@@ -54,7 +54,7 @@
           pkgs.zotero
           pkgs.lmstudio
           #pkgs.wireguard-tools
-          #pkgs.utm
+          pkgs.utm
         ];
 
         system.activationScripts.applications.text = let
