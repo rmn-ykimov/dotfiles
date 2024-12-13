@@ -63,8 +63,7 @@ in {
     nix-index.enableZshIntegration = true;
     nix-index-database.comma.enable = true;
 
-    # FIXME: disable this if you don't want to use the starship prompt
-    starship.enable = true;
+    starship.enable = true; # https://gist.github.com/s-a-c/0e44dc7766922308924812d4c019b109#file-starship-nix
     starship.settings = {
       aws.disabled = true;
       gcloud.disabled = true;
@@ -73,10 +72,11 @@ in {
       directory.style = "blue";
       directory.truncate_to_repo = false;
       directory.truncation_length = 8;
-      python.disabled = true;
+      python.disabled = false;
       ruby.disabled = true;
       hostname.ssh_only = false;
       hostname.style = "bold green";
+
     };
 
     # FIXME: disable whatever you don't want
