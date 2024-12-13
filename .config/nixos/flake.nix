@@ -16,7 +16,6 @@
     nix-index-database.url = "github:Mic92/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
-    #jeezyvim.url = "github:LGUG2Z/JeezyVim";
   };
 
   outputs = inputs:
@@ -35,7 +34,6 @@
 
         overlays = [
           nur.overlay
-          #jeezyvim.overlays.default
 
           (_final: prev: {
             unstable = import nixpkgs-unstable {
