@@ -17,6 +17,7 @@
     wget
     zip
     neovim
+    nerd-fonts.jetbrains-mono
   ];
 
   stable-packages = with pkgs; [
@@ -26,36 +27,6 @@
     # Shell
     zsh
 
-    # key tools
-    #gh # for bootstrapping
-    #just
-
-    # core languages
-    #rustup
-
-    # rust stuff
-    #cargo-cache
-    #cargo-expand
-
-    # local dev stuf
-    #mkcert
-    #httpie
-
-    # treesitter
-    tree-sitter
-
-    # language servers
-    nodePackages.vscode-langservers-extracted # html, css, json, eslint
-    nodePackages.yaml-language-server
-    nil # nix
-
-    # formatters and linters
-    alejandra # nix
-    deadnix # nix
-    #nodePackages.prettier
-    #shellcheck
-    #shfmt
-    statix # nix
   ];
   
 in {
