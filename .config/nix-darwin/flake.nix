@@ -82,7 +82,7 @@
           casks = [
             "blender"
             "vlc"
-            "godot"
+            "godot-mono"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
